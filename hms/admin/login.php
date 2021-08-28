@@ -11,7 +11,7 @@ if(isset($_SESSION['isLoggedIn'])){
 <html>
 <head>
   <title>Login</title>
-  <link rel="stylesheet" type="text/css" href="stylel.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="shortcut icon" type="image/png" href="img/icons8-login-64.png">
 </head>
 <body>
