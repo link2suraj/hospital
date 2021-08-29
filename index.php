@@ -29,6 +29,7 @@ body{
 }
 .left-menu h2{
   color: white;
+  padding-top: 30px;
   /*text-align: center;*/
   /*width: 120px;
   margin: 15px;*/
@@ -59,22 +60,83 @@ body{
   border-radius: 3px;
 }
 
+/* For Cards*/
+
+.card-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space;
+  align-items: center;
+  padding: 20px;
+  width: 22%;
+  margin-top: 120px;
+  background-color: #063146;
+  border-radius: 20px;
+  color: white;
+}
+.card-box a{
+  margin-top: 10px;
+  font-size: 13px;
+  text-decoration: none;
+  color: white;
+  padding: 8px 15px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+
+}
+.card-box h2{
+  margin-bottom: 10px;
+}
+.card-box i{
+  margin-bottom: 10px;
+}
+#body-section{
+  width: 100%;
+ 
+  display: flex;
+  justify-content: space-around;
+
+}
+
+
+/* For Cards*/
+
 </style>
 
 </head>
 <body>
 <div class="menu-bar">
-    <div class="left-menu"><h2>HOSPITAL MS</h2></div>
+    <div class="left-menu"><h2><i class="fas fa-hospital"></i>  HOSPITAL MS</h2></div>
   <div class="right-menu">
       <ul>
       <li class="active"><a href="#"><i class="fas fa-clinic-medical"></i> Home</a></li>
       <li><a href="#"><i class="fas fa-hospital"></i> About Us</a></li>
       <li><a href="#"><i class="fab fa-servicestack"></i> Services</a></li>
       <li><a href="#"><i class="fas fa-phone-alt"></i> Contact</a></li>
-      <li><a href="registration.php"><i class="fas fa-user-plus"></i> Register</a></li>
-      <li><a href="login.php"><i class="fas fa-sign-in-alt"></i> Login</a></li>
     </ul>
   </div>
 </div>
+  <!-- Cards -->
+    <section id="body-section">
+               <div class="card-box">
+                <i class="far fa-user fa-3x"></i>
+                <h2>Patients</h2>
+                <a href="#">Register and Book Appointment</a>
+              </div>  
+
+              <div class="card-box">
+                <i class="fas fa-clipboard-list fa-3x"></i>
+                <h2>Doctor Login</h2>
+                <a href="#">Click Here to Login</a>
+              </div>  
+
+              <div class="card-box">
+                <i class="fas fa-folder-plus fa-3x"></i>
+                <h2>Admin Login</h2>
+                <a href="hms/admin/login.php">Click Here to Login</a>
+              </div>  
+        </section>
+    <!-- Cards -->
+
 </body>
 </html>

@@ -1,14 +1,3 @@
-<?php
-
-	require_once "../dbcon.php";
-	$selectquery = "SELECT * FROM doctors";
-	$query = mysqli_query($con, $selectquery);
-	$num = mysqli_num_rows($query);
-
-	echo "$num";
-
-
- ?>
 
 <!DOCTYPE html>
 <html>
@@ -54,22 +43,42 @@ table {
 	 							<th>Specilization</th>
 	 							<th>Doctor Name</th>
 	 							<th>Address</th>
-	 							<th>Contact Number</th>
+	 							<th>Email</th>
 	 							<th colspan="2">Operation</th>
 	 							
 	 						</tr>
 	 					</thead>
 
 	 					<tbody>
-	 						<tr>
-	 							<td>Demo</td>
-	 							<td>Demo</td>
-	 							<td>Demo</td>
-	 							<td>Demo</td>
-	 							<td>Demo</td>
+
+	 							<?php
+
+									require_once "../dbcon.php";
+									$selectquery = "SELECT * FROM doctors";
+									$query = mysqli_query($con, $selectquery);
+									$num = mysqli_num_rows($query);
+
+									while($res = mysqli_fetch_array($query)) {
+
+								?>
+
+									<tr>
+	 							<td> <?php echo $res['id']; ?> </td>
+	 							<td><?php echo $res['specilization']; ?></td>
+	 							<td><?php echo $res['doctorName']; ?></td>
+	 							<td><?php echo $res['address']; ?></td>
+	 							<td><?php echo $res['docEmail']; ?></td>
 	 							<td><i class="fa fa-edit"></i>&nbsp &nbsp &nbsp &nbsp<i class="fa fa-trash"></i></td>
 	 							
-	 						</tr>	 						
+	 						</tr>	
+
+	 						<?php
+
+	 							}
+	 						?>	
+
+								 
+	 						 						
 	 					</tbody>
 
 	 				</table>	
