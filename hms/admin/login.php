@@ -126,7 +126,7 @@ span.psw {
     <h2>Admin Login Here</h2>
         <p style="color: red"><?php echo @$errmsg ?>
   <div class="imgcontainer">
-    <img src="img_avatar2.jpg" alt="Avatar" class="avatar">
+    <img src=".../../../../img/img_avatar2.jpg" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">

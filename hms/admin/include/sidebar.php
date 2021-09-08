@@ -11,7 +11,7 @@
 
 <body>
     <div class="sidebar">
-    <header>My App</header>
+    <a style="text-decoration: none;" href="index.php"><header>Admin Panel</header></a>
     <ul>
      <li><a href="doctors.php"><i class="fas fa-qrcode"></i>Doctors</a></li>
      <li><a href="#"><i class="fas fa-link"></i>Users</a></li>

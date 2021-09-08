@@ -123,11 +123,16 @@ img{
 }
 .main-header h3{
   margin-left: 5px;
+
 }
-#header-right p{
-  padding-left: 40%;
+#header-right h3{
+  padding-left: 25%;
 
  } 
+ #header-right P{
+  padding: 10px;
+}
+
 #header-right{
   width: 25%;
 }

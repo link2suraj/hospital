@@ -15,14 +15,19 @@
 	<section id="main-content">
 		<header class="main-header">
 			<div id="header-left">
+
+
 				<h2><i class="fas fa-hospital-alt"></i>
 				Hospital Management System</h2>
 			</div>
 			<div id="header-right">
-				<img src="../../img/user.png"> 
-				<h3>Suraj Chaudhary</h3>
-				<p>Admin</p>
+				<img src="../../img/user.png">
+
+				<h3>User</h3>
+				<p><a style="text-decoration: none" href="../patient/logout.php"p><i class="fas fa-sign-out-alt"></i>Logout</a></p>
+		
 			</div>
+		
 		</header>
 		<div class="clear"></div>
 	</section>

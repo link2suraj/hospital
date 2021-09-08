@@ -1,7 +1,7 @@
 <?php
     require_once "../dbcon.php";
     if(isset($_POST['add'])){
-  
+   
     $specilization      = $_POST['specilization'];
     $doctorName         = $_POST['doctorName'];
     $address            = $_POST['address'];
@@ -10,12 +10,11 @@
     $docEmail           = $_POST['docEmail'];
     $password           = $_POST['password'];
 
-     // print_r($contactno);
-    $sql = "INSERT INTO doctors (specilization, doctorName, address, docfees, contactno, docEmail, password) VALUES('$specilization', '$doctorName', '$address', $docfees, $contactno, '$docEmail', '$password')";
+    
+    $sql = "INSERT INTO doctors (specilization, doctorName, address, docfees, contactno, docEmail, password) VALUES('$specilization', '$doctorName', '$address', '$docfees', '$contactno', '$docEmail', '$password')";
     $stmtinsert = $con->query($sql);
     if($stmtinsert){
-      echo '<script>alert("Doctors Added Successfully")</script>';
-      header('location: index.php');
+        echo '<script>alert("Doctors Added Successfully")</script>';
     }else {
         echo "there were error";
     }
@@ -135,20 +134,13 @@ button:hover {
         <hr> <br> <br>
   <form name="add" id="add" action="#" method="POST" onSubmit="return valid();">
     <label for="specilization">Doctor specilization</label>
-    <select id="specilization" name="specilization" required="true">
-                                <option value="">Select Specialization</option>
-                                <?php $ret=mysqli_query($con,"select * from doctorspecilization");
-                                while($row=mysqli_fetch_array($ret))
-                                {
-                                ?>
-                                <option value="<?php echo ($row['specilization']);?>">
-                                  <?php echo htmlentities($row['specilization']);?>
-                                </option>
-                                <?php } ?>
-                                
+    <select id="specilization" name="specilization" required>
+  <option >Select Specialization</option>  
+  <option >General Physician</option>
+  <option >Cardiologist</option>
+  <option >Dermatologist</option>
+  <option >Gynecologist</option>
     </select>
-
-   
 
     <label for="doctorName">Doctor Name</label>
     <input type="text" id="doctorName" name="doctorName" placeholder="Docor Name.." style="width: 100%" required>
@@ -160,7 +152,7 @@ button:hover {
     <input type="number" id="docfees" name="docfees" placeholder="Enter Doctor Consultancy Fees.." style="width: 100%" required>
 
     <label for="contactno">Doctor Contact No.</label>
-    <input type="text" id="contactno" name="contactno" placeholder="Enter Doctor Contact No..." style="width: 100%" required>
+    <input type="number" id="contactno" name="contactno" placeholder="Enter Doctor Contact No..." style="width: 100%" required>
 
     <label for="docEmail">Doctor Email</label>
     <input type="text" id="docEmail" name="docEmail" placeholder="Enter Doctor Email.." style="width: 100%" required>

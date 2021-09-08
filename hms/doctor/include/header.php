@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Header</title>
+	<title>Dotor Panel</title>
 
 	<link rel="stylesheet" type="text/css" href="../../style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,8 +20,7 @@
 			</div>
 			<div id="header-right">
 				<img src="../../img/user.png"> 
-				<h3>Suraj Chaudhary</h3>
-				<p>Admin</p>
+				<h3>Doctor</h3>
 			</div>
 		</header>
 		<div class="clear"></div>

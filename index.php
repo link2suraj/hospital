@@ -121,13 +121,13 @@ body{
                <div class="card-box">
                 <i class="far fa-user fa-3x"></i>
                 <h2>Patients</h2>
-                <a href="#">Register and Book Appointment</a>
+                <a href="hms/patient/login.php">Register and Book Appointment</a>
               </div>  
 
               <div class="card-box">
                 <i class="fas fa-clipboard-list fa-3x"></i>
                 <h2>Doctor Login</h2>
-                <a href="#">Click Here to Login</a>
+                <a href="hms/doctor/login.php">Click Here to Login</a>
               </div>  
 
               <div class="card-box">

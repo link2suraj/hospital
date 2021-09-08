@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,13 +63,25 @@ table {
 
 								?>
 
+								<?php
+															if(isset($_GET['del']))
+								  {
+								          mysqli_query($con,"delete from doctors where id = '".$_GET['id']."'");
+						                  $_SESSION['msg']="data deleted !!";
+								  }
+
+								?>	
+
+
 									<tr>
 	 							<td> <?php echo $res['id']; ?> </td>
 	 							<td><?php echo $res['specilization']; ?></td>
 	 							<td><?php echo $res['doctorName']; ?></td>
 	 							<td><?php echo $res['address']; ?></td>
 	 							<td><?php echo $res['docEmail']; ?></td>
-	 							<td><i class="fa fa-edit"></i>&nbsp &nbsp &nbsp &nbsp<i class="fa fa-trash"></i></td>
+	 							<td><a style="text-decoration: none"; href="update.php?id=<?php echo $res['id'];?>" ><i class="fa fa-edit"></a></i>&nbsp &nbsp &nbsp &nbsp
+
+	 								<a href="manage-doctors.php?id=<?php echo $res['id'];?>&del=delete" onClick="return confirm('Are you sure you want to delete?')"class="btn btn-transparent btn-xs tooltips" tooltip-placement="top" tooltip="Remove"><i class="fa fa-trash"></i> </a></td>
 	 							
 	 						</tr>	
 

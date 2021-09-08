@@ -9,7 +9,7 @@ if(!isset($_SESSION['isLoggedIn'])){
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Admin Panel</title>
+	<title>Doctor Panel</title>
 </head>
 <body>
 	<section id="sidebar">
@@ -21,10 +21,22 @@ if(!isset($_SESSION['isLoggedIn'])){
 	</section>
 
  <section id="body-section">
+
+ 							   <?php
+
+									require_once "../dbcon.php";
+									$selectquery = "SELECT * FROM doctors";
+									$query = mysqli_query($con, $selectquery);
+									$num = mysqli_num_rows($query);
+
+									$res = mysqli_fetch_array($query);
+
+								?>
+
 	 	<div class="card-box">
 	 		<i class="far fa-user fa-3x"></i>
 	 		<h3>My Profile</h3>
-	 		<a href="#">Update Profile</a>
+	 		<a href="update.php?id=<?php echo $res['id'];?>">Update Profile</a>
 	 	</div>	
 
 	 	

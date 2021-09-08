@@ -29,7 +29,7 @@ if(!isset($_SESSION['isLoggedIn'])){
 
 	 	<div class="card-box">
 	 		<i class="fas fa-clipboard-list fa-3x"></i>
-	 		<a href="manage-doctors.php"><h3>Manage Doctors</h3> </a>
+	 		<a href="doctors.php"><h3>Manage Doctors</h3> </a>
 	 	</div>	
 
 	 	<div class="card-box">
